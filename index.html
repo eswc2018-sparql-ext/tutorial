@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<title>Tutorial ESWC 2018: From heterogeneous data to RDF graphs and back</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<style type="text/css">
+.body {
+	margin-top: 50px;
+}
+.bio {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 27px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+</style>
+<script src="javascript/design/bootstrap.min.js"></script>
+<style>
+@media (max-width: 600px) { 
+ * { color: black; }
+ h1 { clear:left; }
+ }
+</style>
+</head>
+<body>
+	<!-- Begin page content -->
+	<div class="container body" id="body">
+
+	<h1>Tutorial ESWC 2018: From heterogeneous data to RDF graphs and back</h1>
+
+<div class="hero-unit">
+
+<div style="text-align:center;overfow: hidden">
+<p>Tutorial held during the <a href="https://2018.eswc-conferences.org/">15th ESWC 2018</a></p>
+<p>3rd or 4th June 2018</p>
+<p><a href="#comite">Olivier Corby, Catherine Faron Zucker, Maxime Lefrançois, Antoine Zimmermann</a></p>
+</div>
+
+
+<div id="program_draft" style="clear:left;">
+
+<br/>
+Contents:
+<ul>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#agenda">Agenda</a></li>
+<li><a href="#organizers">Organizers</a></li>
+</ul>
+<br/>
+<!--<div><div style="width: 50%;margin: 0 auto;border-radius: 25px;padding: 20px; border: 2px solid #239cd3;color:white;width: 70%; text-align: center;font-weight: bold;font-size: 200%;"><a href="diapo">Accédez aux présentations</a></div></div>-->
+<br/>
+
+
+
+<h2 id="abstract">Abstract</h2>
+
+<p>With the rise of the Web and Web of Data, the RDF data model may be used as a lingua franca to reach semantic interoperability and integration and querying of data having heterogeneous formats. This tutorial introduces two domain-independent SPARQL extensions that together aim at lowering the overhead for knowledge engineers to embrace the Semantic Web models and technologies. Application examples will be given in the field of open data.</p>
+
+<p><a href="https://ci.mines-stetienne.fr/sparql-generate/sparql-generate/">SPARQL-Generate</a> is an extension of SPARQL for querying not only RDF datasets but also documents in arbitrary formats. It offers a simple template-based option to generate RDF Graphs from documents in heterogeneous formats. <a href="http://ns.inria.fr/sparql-template">SPARQL Template Transformation Language (STTL)</a> is an extension of SPARQL  which enables  Semantic Web developers to support the many cases where they need to transform RDF data. It enables them to write specific yet compact RDF transformers toward other languages and formats, including RDF itself. Combining SPARQL-Generate and STTL enables users to develop a new variety of applications where RDF is used as a pivot language in Web applications requiring heterogeneous data transformation processes. </p>
+
+<h2 id="topic">Topic and Relevance</h2>
+
+<p>It is commonly understood by developers that the adoption of the Semantic Web models and technologies are enablers for semantic interoperability on the Web and the Web of Things, but that their adoption is bound to that of RDF data <emph>formats</emph>. The topic of this tutorial is SPARQL-Generate and STTL, that were developed by the organizers, recently presented in some of the main Semantic Web conferences (ISWC, ESWC), and both contribute to making the choice of a data format and that of a data model orthogonal. We claim that together they contribute in lowering the costs of reaching semantic interoperability on the Web.</p>
+
+<p>This is the first tutorial that combines the two SPARQL extensions.  A tutorial has already been given on STTL at the fourth French days on software engineering JDEV in 2017 (<a href="http://devlog.cnrs.fr/jdev2017">http://devlog.cnrs.fr/jdev2017</a>). SPARQL-Generate has been used during two Hackatons in 2017 that each involved a dozen of Web developers and Data Scientists in the context of project  OpenSensingCity (<a href="http://opensensingcity.emse.fr/tuba/">http://opensensingcity.emse.fr/tuba/</a> and <a href="http://opensensingcity.emse.fr/peniche/">http://opensensingcity.emse.fr/peniche/</a>) .</p>
+
+
+<h2 id="topic">Duration and Sessions</h2>
+
+<p>The tutorial will be organized on a half day, and will alternate between presentation of the theory and short exercises that make the learners proficient in using the two SPARQL extensions. Applications will be applied to the management and browsing of existing RDF and non-RDF open data, including real-time sensor data.</p>
+
+
+<h2 id="audience">Audience</h2>
+
+<p>This tutorial targets practitioners that use or are responsible of open data publication and management. It intends to provide the attendees with some insight on how the presented SPARQL extensions make open data become Linked Open Data more easily. Familiarity with RDF and SPARQL will be assumed.</p>
+
+
+<h2 id="material">Tutorial Material</h2>
+
+<p>Teaching material including slides, exercises, and data will be available on this website with open licences. The two reference implementations of  the SPARQL extensions are also open source, and can be used after the tutorial. </p>
+
+<p>We ask attendees to come with their own laptop with Java 1.8 and an IDE installed.</p>
+
+
+<h2 id="references">References</h2>
+
+<p>Corby Olivier, Faron-Zucker  Catherine and Gandon Fabien. "LDScript: a Linked Data Script Language." International Semantic Web Conference. Springer, Cham, 2017.</p>
+<p>Corby  Olivier and Faron-Zucker Catherine. "STTL: a SPARQL-based transformation language for RDF." International Conference on Web Information Systems and Technologies. 2015.</p>
+<p>Lefrançois, Maxime; Zimmermann, Antoine; and Bakerally, Noorani. "A SPARQL extension for generating RDF from heterogeneous formats". Extended Semantic Web Conference, ESWC, 2017.</p>
+<p>Lefrançois, Maxime; Zimmermann, Antoine; and Bakerally, Noorani. "Flexible RDF generation from RDF and heterogeneous data sources with SPARQL-Generate". International Conference on Knowledge Engineering and Knowledge Management, 2016</p>
+
+
+
+<h2 id="agenda">Agenda</h2>
+
+<table border="0" class="table table-striped">
+<tr class="a">
+<th>Agenda</th>
+<th>Topic</th>
+<th>Presenter</th>
+
+<tr class="b"><td></td><td>tba</td><td></td></tr>
+
+<!--<tr class="b"><td>17:45 - 18:00</td><td>Conclusion - questions - discussions</td><td></td></tr>-->
+
+</table>
+
+
+
+
+<h2 id="organizers">Organizers</h2>
+
+<ul>
+  <li>Olivier Corby, Université Côte d’Azur, Inria, CNRS, I3S, France (<a href="mailto:olivier.corby@inria.fr">olivier.corby@inria.fr</a>)</li>
+  <li>Catherine Faron Zucker, Université Côte d’Azur, Inria, CNRS, I3S, France (<a href="mailto:catherine.faron-zucker@unice.fr">catherine.faron-zucker@unice.fr</a>)</li>
+  <li>Maxime Lefrançois, École des Mines de Saint-Étienne, France (<a href="mailto:maxime.lefrancois@emse.fr">maxime.lefrancois@emse.fr</a>)</li>
+  <li>Antoine Zimmermann, École des Mines de Saint-Étienne, France (<a href="mailto:antoine.zimmermann@emse.fr">antoine.zimmermann@emse.fr</a>)</li>
+</ul>
+
+<p>Olivier Corby and Catherine Faron Zucker are both members of the WIMMICS joint team between Inria Sophia Antipolis Méditerranée and the I3S laboratory, within Université Côte d’Azur. They are co-authors of a book and two MOOCS on the Semantic Web models and technologies. They designed the STTL language (<a href="http://ns.inria.fr/sparql-template">http://ns.inria.fr/sparql-template</a>).</p>
+
+<p>Olivier Corby is a senior researcher at Inria Sophia Antipolis. His research interests are Programming the Semantic Web of Linked Data and Knowledge Representation and Reasoning. He is the designer of the Corese Semantic Web Factory that implements STTL. He teaches the Semantic Web at University of Nice and gave tutorials in several conference.</p>
+ 
+<p>Catherine Faron Zucker is associate professor at Université Nice Sophia Antipolis since 2002. Her main research interests are Semantic Web, Ontologies, Knowledge Representation and Reasoning. She is responsible of a master track on Web Science and Technologies, where she teaches Semantic Web models and technologies on a regular basis, and she gave several introductory presentations and tutorials on these topics.</p>
+  
+<p>Maxime Lefrançois and Antoine Zimmermann are both associate professor at École des Mines de Saint-Étienne, and members of Laboratoire Hubert Curien. They co-designed the SPARQL-Generate language.</p>
+  
+</p>Maxime Lefrançois focuses on lowering the costs of adoption of the Semantic Web formalisms and technologies. He is the initiator and main developer of the <a href="https://ci.mines-stetienne.fr/sparql-generate/sparql-generate/">SPARQL-Generate</a> reference implementation, main developer of the SEAS versioned and modular ontologies, and recently co-edited the Semantic Sensor Network recent joint OGC/W3C recommendation.</p>
+
+<p>Antoine Zimmermann’s work is related to representing, reasoning, and querying data and knowledge on the Semantic Web, with a particular interest in multicontextual, heterogeneous information modelling and exploitation. He currently coordinates national project OpenSensingCity and has participated in several research projects at the national level in France and at a European level. He has taught about Semantic Web technologies for 6 years to Master level students.</p>
+
+
+
+</div>
+</div>
+</div>
+</body>
+</html>
