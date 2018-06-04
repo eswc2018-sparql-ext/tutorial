@@ -1,0 +1,43 @@
+#
+# Service URL:
+# http://localhost:8080/srv/tutorial/demo
+#
+
+st:demo a st:Server ;
+st:service "demo" ;
+
+st:param [
+    st:export true ;
+    st:hyperlink true ;
+    #st:uri <http://fr.dbpedia.org/resource/Antibes> ;
+    st:lodprofile (
+        (<http://fr.dbpedia.org/>   st:dbpedia)
+        ("*"                        st:lod)
+    ) ;
+    st:mapzoom 4 ;
+    st:mapsize "mapsmall" ;
+] ;
+st:workflow st:demoWorkflow ;
+
+st:content st:demoContent 
+.
+
+
+# process data:
+st:demoWorkflow a sw:Workflow ; 
+sw:body (
+    [ a sw:Transformation ; sw:uri <sttl/> ]
+)
+
+
+
+# load data:
+st:demoContent a sw:Workflow ; sw:body (
+#    [ a sw:Query ; sw:uri <query/initialize.rq> ]
+    
+    [ a sw:Load ; sw:path <data/> ]
+      
+#    [ a sw:Query ;  sw:uri <query/insert1.rq> ]
+  )
+.
+

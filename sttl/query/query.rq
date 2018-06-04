@@ -1,0 +1,39 @@
+#
+# Spot geo:Point locations on a map, select value of a sensor
+#
+prefix sosa: <http://www.w3.org/ns/sosa/> 
+prefix geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+prefix aqio: <https://ci.mines-stetienne.fr/aqi/ontology#> .
+prefix cdt:  <http://w3id.org/lindt/custom_datatypes#> .
+
+construct {
+    ?uri a geo:Point ; ?p ?o
+    ?mes sosa:hasFeatureOfInterest ?uri ;
+        sosa:observedProperty ?q ;        
+        ?qq ?v .
+    ?q a ?r
+}
+where {
+    ?uri a geo:Point ; ?p ?o
+    ?mesure sosa:hasFeatureOfInterest ?uri ;
+        sosa:observedProperty ?op .
+    ?op a aqio:AirQualityIndexProperty .
+    
+    ?mesure  sosa:hasSimpleResult ?value  .
+        filter (us:value(?value) <= 40)
+    
+    ?mes sosa:hasFeatureOfInterest ?uri ; 
+        sosa:observedProperty ?q ; 
+        ?qq ?v .
+    ?q a ?r
+}
+
+
+
+function us:value(?val) {
+    if (strstarts(datatype(?val), cdt:),
+        if (contains(str(?val), " "), 
+            xsd:double(strbefore(str(?val), " ")),
+            ?val), 
+        if (datatype(?val) = xsd:string, 0, ?val))
+}

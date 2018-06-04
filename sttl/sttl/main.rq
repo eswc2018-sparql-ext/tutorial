@@ -1,0 +1,23 @@
+#
+# Compute aggregates (min, max, etc.)
+# Generate a map and spot geo:Point
+# Display sensor values
+#
+template st:main {
+
+    # generate a map
+    st:call-template(st:place)
+
+    format  {
+        <format/frame.html>
+        
+        st:call-template(st:header)
+        ?agg        
+        st:call-template(st:header)
+        st:call-template(st:resource)        
+    }    
+}
+where {
+    bind (st:call-template(st:aggregate)  as ?agg)
+}
+
