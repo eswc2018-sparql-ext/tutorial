@@ -82,6 +82,14 @@ Contents:
 
 <p>We ask attendees to come with their own laptop with <span style='font-weight:bold'>Java 1.9</span> and an IDE installed.</p>
 
+
+<h3>Introductory slides</h3>
+
+<object data="Tutorial ESWC 2018.pdf" type="application/pdf" width="600px" height="600px">
+  <p><a href='Tutorial ESWC 2018.pdf'>Introductory slides are available as a pdf</a></p>
+</object>
+
+
 <h3>Part 1: SPARQL-Generate</h3>
 
 <p>The data we will be using during this tutorial is available at the following location <a href="https://ci.mines-stetienne.fr/aqi/">https://ci.mines-stetienne.fr/aqi/</a>.</p>
@@ -96,11 +104,26 @@ Recommended ways to use SPARQL-Generate for this tutorial are the <a href="https
 
 <h3>Part 2: STTL</h3>
 
-<p>
-You need to download <a href='http://wimmics.inria.fr/doc/tutorial/corese-server-4.0.2.jar'>Corese server</a> and download and extract <a href='http://wimmics.inria.fr/doc/tutorial/eswc.tar.gz'>STTL archive</a>. <br/>
-<a href='http://wimmics.inria.fr/doc/tutorial/sttl.pdf'>STTL slides</a> are available as well as the <a href='http://wimmics.inria.fr/doc/tutorial/sttl-ex.pdf'>STTL exercise</a>. <br/>
-<a href='http://ns.inria.fr/sparql-template'>STTL</a> and <a href='http://ns.inria.fr/sparql-extension'>Linked Data Script</a> technical documentation are also available.
+<p><a href='http://wimmics.inria.fr/doc/tutorial/sttl.pdf'>STTL slides</a> are available as well as the <a href='http://wimmics.inria.fr/doc/tutorial/sttl-ex.pdf'>STTL exercise</a>.</p>
+
+<object data="http://wimmics.inria.fr/doc/tutorial/sttl-slide.pdf" type="application/pdf" width="600px" height="600px">
+  <p><a href='http://wimmics.inria.fr/doc/tutorial/sttl-slide.pdf'>STTL slides</a> are available</p>
+</object>
+
+<p><a href='http://ns.inria.fr/sparql-template'>STTL</a> and <a href='http://ns.inria.fr/sparql-extension'>Linked Data Script</a> technical documentation are also available.
 </p>
+
+<p>
+  To test the STTL language you need to download <a href='http://wimmics.inria.fr/doc/tutorial/corese-server-4.0.2.jar'>the Corese server</a> and download and extract <a href='http://wimmics.inria.fr/doc/tutorial/eswc.tar.gz'>STTL archive</a>. Then the commands to run the server are shown below:
+</p>
+
+<pre># with Linux:
+java -jar corese-server-4.0.2.jar -pp /home/path/eswc/profile.ttl -lh -debug
+
+# with Windows:
+java "-Dfile.encoding=UTF-8" -jar corese-server-4.0.2.jar -pp eswc/profile.ttl -lh -debug</pre>
+
+<p>Then access the service using your web browser at <a href="http://localhost:8080">http://localhost:8080</a>, click on Demo (top right) then select Demo</p>
 
 
 <h2 id="references">References</h2>
